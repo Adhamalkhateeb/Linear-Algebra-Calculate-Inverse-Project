@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inverse Solver</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inverse Solver</h1>
+      <div class="inputs">
+        <input id="eqCount" type="number" placeholder="Equations" />
+      </div>
+      <button onclick="buildMatrix()">Generate Matrix</button>
+      <div id="matrixContainer"></div>
+      <button id="solveBtn" style="display: none" onclick="Solve()">
+        Solve
+      </button>
+      <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

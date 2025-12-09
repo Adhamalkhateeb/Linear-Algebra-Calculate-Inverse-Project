@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  background: #0e0f11;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #e5e5e5;
+}
+
+.container {
+  width: 92%;
+  max-width: 900px;
+  background: #15171a;
+  padding: 35px;
+  border-radius: 14px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.method-select {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="number"] {
+  padding: 14px 15px;
+  background: #1e2024;
+  color: #e5e5e5;
+  border-radius: 14px;
+  border: 1px solid #2a2c31;
+  outline: none;
+  font-size: 15px;
+  width: 150px;
+}
+
+input[type="number"]:focus {
+  border-color: #6366f1;
+  background: #202227;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button:hover {
+  background: #4f4fe0;
+}
+
+#matrixContainer {
+  margin-top: 25px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+td {
+  display: flex;
+}
+pre {
+  margin: 20px 0;
+}
+td input {
+  width: 80px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #1e2024;
+  border: 1px solid #2a2c31;
+  color: #e5e5e5;
+  font-size: 15px;
+  outline: none;
+}
+
+.matrix-table td {
+  width: 80px;
+  padding: 12px;
+  background: #1e2024;
+  border: 1px solid #2a2c31;
+  color: #e5e5e5;
+  font-size: 15px;
+  outline: none;
+}
+
+td input:focus {
+  border-color: #6366f1;
+  background: #202227;
+}
+
+#results {
+  margin-top: 30px;
+  background: #1b1d21;
+  padding: 20px;
+  border-radius: 14px;
+  display: none;
+}
+
+#results h3 {
+  margin-top: 0;
+}
+
+strong {
+  font-size: 25px;
+  color: #6365f177;
+}
