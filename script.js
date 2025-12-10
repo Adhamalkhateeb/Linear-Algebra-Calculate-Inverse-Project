@@ -46,7 +46,9 @@ function toFraction(decimal) {
   numerator /= g;
   denominator /= g;
 
-  return denominator === 1 ? `${numerator}` : `${numerator}/${denominator}`;
+  return denominator === 1
+    ? `${numerator}`
+    : `<p><sup>${numerator}</sup> / <sub>${denominator}</sub></p>`;
 }
 
 function printStep(msg) {
@@ -93,21 +95,21 @@ function buildDeterminantMatrix(matrix, i, j) {
 
 function printMinor(matrix) {
   let n = matrix.length;
-  let message = "";
+  let message = "<br><span style='white-space: pre;'>";
 
   for (let i = 0; i < n; i++) {
-    if (i === 0) message += "<br>";
-
     message += "|";
 
     for (let j = 0; j < n; j++) {
       message += String(matrix[i][j]).padStart(4, " ");
     }
 
-    message += " |";
+    message += "|".padStart(4, " ");
 
-    if (i < n - 1) message += "<br>" + " ";
+    if (i < n - 1) message += "\n";
   }
+
+  message += "</span>";
 
   return message;
 }
@@ -183,7 +185,7 @@ function GetCofactor(matrix) {
       printStep(
         `C<sub>${r + 1}${c + 1}</sub> = ${sign > 0 ? "+" : "-"} det(M<sub>${
           r + 1
-        }${c + 1}</sub>) = (-1)^ <sup>${r + 1}${c + 1}</sup> × ${minorDet} = ${
+        }${c + 1}</sub>) = (-1)^ <sup>${r + 1 + c + 1}</sup> × ${minorDet} = ${
           cofactorMatrix[r][c]
         }`
       );
